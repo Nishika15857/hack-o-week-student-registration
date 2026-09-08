@@ -38,22 +38,32 @@ function validateStudentData(name, roll, email, age) {
         throw new ValidationError("Student name cannot be empty.");
     }
 
-    // Condition 2: Check if Roll Number is empty
+    // Condition 2: Check if Student Name is too short (Minimum 3 characters)
+    if (name.trim().length < 3) {
+        throw new ValidationError("Student name must be at least 3 characters long.");
+    }
+
+    // Condition 3: Check if Roll Number is empty
     if (!roll || roll.trim() === "") {
         throw new ValidationError("Roll number is required.");
     }
 
-    // Condition 3: Check if Email is valid
+    // Condition 4: Check if Roll Number contains invalid characters
+    if (!/^[a-zA-Z0-9]+$/.test(roll.trim())) {
+        throw new ValidationError("Roll number must contain only letters and digits without special characters.");
+    }
+
+    // Condition 5: Check if Email is valid
     if (!email || !email.includes("@") || !email.includes(".")) {
         throw new ValidationError("Please enter a valid email address (e.g. name@domain.com).");
     }
 
-    // Condition 4: Check if Age is empty
+    // Condition 6: Check if Age is empty
     if (!age || isNaN(age)) {
         throw new ValidationError("Please enter a valid numeric age.");
     }
 
-    // Condition 5: Check if Age is below 18 (Custom rule)
+    // Condition 7: Check if Age is below 18 (Custom rule)
     if (Number(age) < 18) {
         throw new ValidationError("Age must be 18 or above to register.");
     }
