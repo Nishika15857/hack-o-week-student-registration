@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Header -->
+        <header>
+            <h2>🎓 Student Registration Form</h2>
+            <p class="subtitle">Hack-O-Week Project: JavaScript Error Handling & NPM</p>
+        </header>
+
+        <!-- Notification Message Box (Displays Custom Errors and Success Messages) -->
+        <div id="messageBox" class="message-box hidden"></div>
+
+        <!-- Registration Form -->
+        <form id="registrationForm" novalidate>
+            <!-- Student Name -->
+            <div class="form-group">
+                <label for="studentName">Student Full Name:</label>
+                <input type="text" id="studentName" placeholder="e.g. Rahul Sharma" autocomplete="off">
+            </div>
+
+            <!-- Roll Number -->
+            <div class="form-group">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" placeholder="e.g. 23CS101" autocomplete="off">
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="e.g. rahul@example.com" autocomplete="off">
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age (Years):</label>
+                <input type="number" id="age" placeholder="e.g. 19" autocomplete="off">
+                <small class="hint">Minimum required age is 18 years.</small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn">Register Student</button>
+        </form>
+
+        <!-- Registered Students Display Area -->
+        <section class="records-section">
+            <h3>Registered Students</h3>
+            <ul id="studentsList" class="students-list">
+                <li class="empty-notice">No students registered yet.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

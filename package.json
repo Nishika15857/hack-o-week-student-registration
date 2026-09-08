@@ -1,0 +1,21 @@
+{
+  "name": "hack-o-week-student-registration",
+  "version": "1.0.0",
+  "description": "Student Registration Project demonstrating JavaScript Error Handling, Git/GitHub, and NPM basics.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node -e \"console.log('Project is running! Open index.html in your browser.')\""
+  },
+  "keywords": [
+    "student-registration",
+    "error-handling",
+    "try-catch",
+    "npm",
+    "github"
+  ],
+  "author": "3rd Semester CSE Student",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
